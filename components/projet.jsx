@@ -6,13 +6,13 @@ export default function Projet({ project, index }) {
 
   return (
     <div
-      className={`flex  md:justify-between  md:flex-${flexDirection}`}
+      className={`flex  md:justify-between single-project  flex-${flexDirection}`}
     >
-      <div className="md:px-12 text-p-font-size flex-1">
-        <div className="sticky top-48">
+      <div className="text-p-font-size flex-1 md:pt-24 md:pb-12">
+        <div className="sticky top-24 md:px-24 ">
         <h2 className="">{project.titre}</h2>
-        <h4>{project.sousTitre}</h4>
-        <h3 className="text-p-font-size md:pt-8">{project.text}</h3>
+        <h4 className="relative md:-top-6">{project.sousTitre}</h4>
+        <h3 className=" md:pt-8">{project.text}</h3>
         </div>
       
       </div>
@@ -26,7 +26,7 @@ export default function Projet({ project, index }) {
               src={urlForImage(image.image.asset._ref)}
               alt="Details instruments"
               width={1560}
-              height={1200}
+              height={1800}
             />
           </div>
         ))}

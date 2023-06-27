@@ -4,11 +4,11 @@ import Projet from "./projet"; // Import the Projet component
 
 export default function AllProjects({ projectsData }) {
   return (
-    <div>
+    <section className="projects">
       {projectsData.map((project, index) => (
 
         <Projet key={project._id} project={project} index={index} />
       ))}
-    </div>
+    </section>
   );
 }

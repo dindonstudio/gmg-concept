@@ -2,11 +2,27 @@
 import Image from "next/image";
 import logo from "../public/logo-cropped.svg";
 import logoG from "../public/logo-g.svg";
+import useScrollTranslate from "./utils/useScrollEffect";
+import { useEffect } from "react";
 export default function Header() {
-  return (
+  const translateY = useScrollTranslate(100);
+
+  useEffect(() => {
+    const header = document.querySelector('header');
+
+    if (header) {
+      if (translateY === -100) {
+        header.classList.add('translate-y-100');
+      } else {
+        header.classList.remove('translate-y-100');
+      }
+    }
+  }, [translateY]);
+return(
     <>
-      <header className="fixed w-full h-36 pt-12 px-12  z-10 bg-transparent transition-ease opacity-0 ">
-        <div className="grid grid-cols-12  h-full">
+      <header className="fixed w-full h-36 pt-12 px-12  z-10 bg-transparent transition-ease opacity-0 "
+           >
+        <div className="grid transition-ease grid-cols-12  h-full"  style={{ transform: `translateY(${translateY}rem)` }}>
           <div className="image__container relative group">
             <Image
               className="w-full h-full object-contain absolute left-0 top-0   "
