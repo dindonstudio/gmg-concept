@@ -72,39 +72,9 @@ export default defineConfig({
               ),
               orderableDocumentListDeskItem({type: 'projets',  title: 'Projects', S, context}),
               // S.documentTypeListItem("projets").title("Projets"),
-              S.listItem()
-              .title("Avantages")
-              .id("avantages")
-              .child(
-                // Instead of rendering a list of documents, we render a single
-                // document, specifying the `documentId` manually to ensure
-                // that we're editing the single instance of the document
-                S.document()
-                  .schemaType("avantages")
-                  .documentId("avantages")
-              ),
-              S.listItem()
-              .title("NFT")
-              .id("nft")
-              .child(
-                // Instead of rendering a list of documents, we render a single
-                // document, specifying the `documentId` manually to ensure
-                // that we're editing the single instance of the document
-                S.document()
-                  .schemaType("nft")
-                  .documentId("nft")
-              ),
-              S.listItem()
-              .title("QR Code")
-              .id("qrcode")
-              .child(
-                // Instead of rendering a list of documents, we render a single
-                // document, specifying the `documentId` manually to ensure
-                // that we're editing the single instance of the document
-                S.document()
-                  .schemaType("qrcode")
-                  .documentId("qrcode")
-              ),
+       
+             
+             
               S.listItem()
               .title("Footer")
               .id("footer")
@@ -118,7 +88,6 @@ export default defineConfig({
               ),
               S.divider(),
             // Regular document types
-            S.documentTypeListItem("pageFooter").title("Pages légales"),
             // S.documentTypeListItem("author").title("Authors"),
           ]),
     }),

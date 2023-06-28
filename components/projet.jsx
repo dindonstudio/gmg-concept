@@ -20,9 +20,9 @@ export default function Projet({ project, index }) {
       </div>
       <div className="flex flex-col flex-1">
         {project.images.map((image, imageIndex) => (
-          <div className="image__container ">
+          <div key={image._key} className="image__container">
             <Image
-              key={image._key}
+              
               className="w-full h-full object-contain   "
               priority
               src={urlForImage(image.image.asset._ref)}

@@ -11,7 +11,7 @@ export default function Hero({ presentationData }) {
       <div className=" flex-1">
         <h3>{presentationData[0].textRight}</h3>
         {presentationData[0].code.map((code, index) => (
-              <p key={code._key} className="">
+              <p key={index} className="">
          {code.titre}
               </p>
             ))} 
