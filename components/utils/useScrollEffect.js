@@ -4,11 +4,22 @@ import { useState, useEffect } from 'react';
 
 const useScrollTranslate = (threshold) => {
   const [scrollY, setScrollY] = useState(0);
-  const [translateY, setTranslateY] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > scrollY && currentScrollY > threshold) {
+        setScrollDirection('down');
+        console.log('down')
+      } else if (currentScrollY < scrollY && currentScrollY > threshold) {
+        setScrollDirection('up');
+        console.log('up')
+
+      }
+
+      setScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -16,17 +27,9 @@ const useScrollTranslate = (threshold) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
-
-  useEffect(() => {
-    if (scrollY > threshold) {
-      setTranslateY(-12);
-    } else {
-      setTranslateY(0);
-    }
   }, [scrollY, threshold]);
 
-  return translateY;
+  return scrollDirection;
 };
 
 export default useScrollTranslate;
