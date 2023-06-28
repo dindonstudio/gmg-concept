@@ -8,18 +8,21 @@ import Header from "@/components/header";
 import Presentation from '@/components/presentation'
 import AllProjects from "@/components/allProjects";
 import { getHero, getPresentation, getProjects } from "../sanity/sanity-util";
+import { useEffect } from "react";
 export default async function Home() {
   const heroData = await getHero();
   const presentationData = await getPresentation();
   const projectsData = await getProjects();
+
+
   return (
     <>
         <ReactLenis root options={{ lerp: 0.08, wheelMultiplier: 0.8}}>
 
       <Overlay />
-      <Header/>
+      <Header />
       <Hero heroData={heroData} />
-      {/* <Presentation presentationData={presentationData} /> */}
+      <Presentation presentationData={presentationData} />
       <AllProjects projectsData={projectsData} />
       </ReactLenis>
     </>

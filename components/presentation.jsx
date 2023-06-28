@@ -5,10 +5,10 @@ export default function Hero({ presentationData }) {
 
   return (
     <div>
-      <div className="md:grid grid grid-cols-12 md:gap-12 md:px-12 md:pt-48 md:pb-40">
+      <div className="flex px-extend-3rem py-24 bg-light-grey text-dark-blue gap">
 
-      <h2 className="md:col-start-3 md:col-end-11 text-center">{presentationData[0].texteLeft}</h2>
-      <div className="md:col-start-1 md:col-end-10">
+      <h3 className=" flex-1 ">{presentationData[0].texteLeft}</h3>
+      <div className=" flex-1">
         <h3>{presentationData[0].textRight}</h3>
         {presentationData[0].code.map((code, index) => (
               <p key={code._key} className="">
