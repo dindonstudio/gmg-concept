@@ -7,7 +7,7 @@ export default function ContactForm() {
     return <p>Merci pour votre message ! Nous vous recontacterons dans les 48h.</p>;
   }
   return (
-    <form className="flex flex-col flex-1 gap-8" onSubmit={handleSubmit}>
+    <form className="flex flex-col flex-1 gap-8 " onSubmit={handleSubmit}>
    
       <input id="name" type="name" name="name" placeholder="Nom" />
       <input id="email" type="email" name="email" placeholder="Adresse Email" />

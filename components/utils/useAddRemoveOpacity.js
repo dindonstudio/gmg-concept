@@ -6,7 +6,7 @@ export function useAddRemoveOpacity() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAddRemoveOpacity(true);
-    }, 3000);
+    }, 0);
 
     return () => clearTimeout(timeout);
   }, []);
