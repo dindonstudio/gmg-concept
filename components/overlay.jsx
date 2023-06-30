@@ -8,7 +8,7 @@ export default function Overlay() {
 
   return (
     <>
-      <div className={`overlay bg-light-blue z-10 fixed top-0 left-0 h-screen w-screen ${addRemoveOpacity ? 'removeOpacity' : 'opacity-100'}`}>
+      <div className="overlay bg-light-blue z-10 fixed top-0 left-0 h-screen w-screen removeOpacity  opacity-100 ">
         <div className="svg-container w-full h-full flex justify-center items-center fade-out-down ">
           <SvgComponent />
         </div>
