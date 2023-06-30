@@ -5,17 +5,17 @@ export default function Hero({ presentationData }) {
 
   return (
     <div>
-      <div className="flex px-extend-3rem py-24 bg-light-grey text-dark-blue gap">
+      <div className="flex px-extend-3rem py-60 bg-light-grey text-dark-blue gap justify-center">
 
-      <h3 className=" flex-1 ">{presentationData[0].texteLeft}</h3>
-      <div className=" flex-1">
+      <h3 className=" flex-1 big-intro ">{presentationData[0].texteLeft}</h3>
+      {/* <div className=" flex-1">
         <h3>{presentationData[0].textRight}</h3>
         {presentationData[0].code.map((code, index) => (
               <p key={index} className="">
          {code.titre}
               </p>
             ))} 
-       </div>
+       </div> */}
       </div>
     </div>
   );

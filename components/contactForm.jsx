@@ -7,14 +7,13 @@ export default function ContactForm() {
     return <p>Merci pour votre message ! Nous vous recontacterons dans les 48h.</p>;
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="flex flex-col flex-1 gap-8" onSubmit={handleSubmit}>
    
-      <label htmlFor="name">Nom</label>
-      <input id="name" type="name" name="name" />
-      <label htmlFor="email">Adresse Email</label>
-      <input id="email" type="email" name="email" />
+      <input id="name" type="name" name="name" placeholder="Nom" />
+      <input id="email" type="email" name="email" placeholder="Adresse Email" />
+      <input id="company" type="text" name="company" placeholder="Entreprise" />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
-      <textarea id="message" name="message" />
+      <textarea id="message" name="message" placeholder="Message" />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <button type="submit" disabled={state.submitting}>
         Envoyer
