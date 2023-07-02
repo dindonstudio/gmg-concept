@@ -5,7 +5,7 @@ export default function Projet({ project, index }) {
   const flexDirection = index % 2 === 0 ? "row" : "row-reverse";
 
   return (
-    <div
+    <div id={project.slug.current}
       className={`flex  md:justify-between single-project  flex-${flexDirection}`}
     >
       <div className="text-p-font-size flex-1  md:pb-12">

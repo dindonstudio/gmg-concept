@@ -205,3 +205,31 @@ CustomEase.create("circ", "0.85, 0, 0.15, 1"); */
     transform: translateY(10px);
   }
 }
+
+/* 
+AOS UTILS  */
+
+[data-aos="fade-in-right"] {
+  transform: translateX(50px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+[data-aos="fade-in-up"] {
+  transform: translateY(50px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+body[data-aos-easing="new-easing"] [data-aos],
+[data-aos][data-aos][data-aos-easing="new-easing"] {
+  transition-timing-function: cubic-bezier(0.41, 0.75, 0.07, 0.97);
+  transition-duration: 1s;
+}

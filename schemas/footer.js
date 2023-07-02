@@ -5,7 +5,11 @@ export default {
     title: 'Footer',
  
     fields: [
-      // Other fields in the footer document schema...
+      {
+        name: 'footerText',
+        type: 'text',
+        title: 'Phrase Contact',
+      },
       {
         name: "texts",
         type: "array",

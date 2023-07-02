@@ -12,10 +12,9 @@ const useScrollTranslate = (threshold) => {
 
       if (currentScrollY > scrollY && currentScrollY > threshold) {
         setScrollDirection('down');
-        console.log('down')
       } else if (currentScrollY < scrollY && currentScrollY > threshold) {
         setScrollDirection('up');
-        console.log('up')
+
 
       }
 

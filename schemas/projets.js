@@ -13,6 +13,15 @@ export default {
         type: "string",
         title: "Titre",
       },
+      {
+        title: 'Slug',
+        name: 'slug',
+        type: 'slug',
+        options: {
+          source: 'titre',
+          maxLength: 96,
+        },
+      },
       orderRankField({ type: "projets", name: 'name' }),
       {
         name: "sousTitre",
