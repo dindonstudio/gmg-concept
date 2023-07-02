@@ -12,11 +12,13 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   const lenis = useLenis(({ scroll }) => {
 
+
   });
+
   return (
-    <ReactLenis root options={{ lerp: 0.08, wheelMultiplier: 0.8 }}>
-      <html lang="en">
-        <body className={inter.className}>{children}</body>
+    <ReactLenis root options={{ lerp: 0.08, wheelMultiplier: 0.5 }}>
+      <html  lang="en">
+        <body >{children}</body>
       </html>
     </ReactLenis>
   );

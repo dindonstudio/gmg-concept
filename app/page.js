@@ -23,12 +23,15 @@ export default async function Home() {
 
   return (
     <>
-        {/* <Overlay /> */}
+        <Overlay />
+        <div className="fixed tempFixed ">
         <Header projectsData={projectsData} />
         <Hero heroData={heroData} />
         <Presentation presentationData={presentationData} />
         <AllProjects projectsData={projectsData} />
         <Footer footerData={footerData} />
+        </div>
+    
     </>
   );
 }

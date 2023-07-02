@@ -10,6 +10,7 @@ module.exports = {
       padding:{
         'extend-3rem':'clamp(20px, calc(20.47px + 0.94vw), 40px);'
       },
+      
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

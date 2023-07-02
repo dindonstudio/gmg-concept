@@ -24,7 +24,16 @@ export default function Header({ projectsData }) {
     lenis.scrollTo(`#${project.slug}`);
   };
 
-
+  useEffect(() => {
+    const tempFixedElement = document.querySelector(".tempFixed");
+  console.log(tempFixedElement)
+    setTimeout(() => {
+      if (tempFixedElement) {
+        tempFixedElement.style.position = "relative";
+      }
+    }, 3300);
+  }, []);
+  
   useEffect(() => {
     let timeoutId;
 
@@ -85,16 +94,16 @@ export default function Header({ projectsData }) {
                   onClick={() => lenis.scrollTo(`#${project.slug.current}`)}
                   className="flex items-center"
                 >
-                  <p>{project.titre}</p>
+                  <p className=" hover-underline-animation">{project.titre}</p>
                 </Link>
               ))}
             
               <Link
                 href="#contact"
                 onClick={handleClickContact}
-                className="flex items-center"
+                className="flex items-center "
               >
-                <p>Contact</p>
+                <p className="hover-underline-animation">Contact</p>
               </Link>
             </div>
           </div>
