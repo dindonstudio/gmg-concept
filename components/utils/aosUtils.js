@@ -69,7 +69,7 @@ export function getAosPropsFade(useAOS) {
       "data-aos": "fade-opacity",
      
       "data-aos-easing": "new-easing",
-      "data-aos-offset": "500",
+      "data-aos-offset": "400",
       "data-aos-once": "true"
     };
   }
@@ -82,7 +82,45 @@ export function getAosPropsFadeDelay(useAOS) {
       "data-aos-delay": "200",
       "data-aos-duration": "1000",
       "data-aos-easing": "new-easing-delay",
-      "data-aos-offset": "500",
+      "data-aos-offset": "400",
+      "data-aos-once": "true"
+    };
+  }
+  return {};
+}
+export function getAosPropsWidth(useAOS) {
+  if (useAOS) {
+    return {
+      "data-aos": "width-opacity",
+ 
+      "data-aos-duration": "1000",
+      "data-aos-easing": "new-easing",
+      "data-aos-offset": "200",
+      "data-aos-once": "true"
+    };
+  }
+  return {};
+}
+
+export function getAosPropsFadeShortOffset(useAOS) {
+  if (useAOS) {
+    return {
+      "data-aos": "fade-in-up-short",
+      "data-aos-duration": "1000",
+      "data-aos-easing": "new-easing",
+      "data-aos-offset": "200",
+      "data-aos-once": "true"
+    };
+  }
+  return {};
+}
+export function getAosPropsFadeShortOffsetDelay(useAOS) {
+  if (useAOS) {
+    return {
+      "data-aos": "fade-in-up-short",
+      "data-aos-duration": "1000",
+      "data-aos-easing": "new-easing",
+      "data-aos-offset": "200",
       "data-aos-once": "true"
     };
   }

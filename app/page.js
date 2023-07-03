@@ -6,6 +6,7 @@ import Overlay from "@/components/overlay";
 import Hero from "@/components/hero";
 import Header from "@/components/header";
 import Presentation from "@/components/presentation";
+import Solutions from "@/components/solutions";
 import AllProjects from "@/components/allProjects";
 import Footer from "@/components/footer";
 import {
@@ -28,7 +29,10 @@ export default async function Home() {
         <Header projectsData={projectsData} />
         <Hero heroData={heroData} />
         <Presentation presentationData={presentationData} />
+        <Solutions presentationData={presentationData} />
+
         <AllProjects projectsData={projectsData} />
+
         <Footer footerData={footerData} />
         </div>
     

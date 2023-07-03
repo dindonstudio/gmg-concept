@@ -64,7 +64,7 @@ export default function Header({ projectsData }) {
             transform: visible ? "translateY(0)" : "translateY(-12rem)",
           }}
         >
-          <Link onClick={handleClick} href="#hero">
+          <a onClick={handleClick} href="#hero">
             <div className="image__container relative group h-full w-full">
               <Image
                 className="w-full h-full object-contain absolute left-0 top-0   "
@@ -83,28 +83,28 @@ export default function Header({ projectsData }) {
                 alt="Logo Buffet Crampon"
               />
             </div>
-          </Link>
+          </a>
 
           <div className="flex col-span-11 text-p-font-size justify-end">
             <div className="flex text-dark-blue gap-28">
               {projectsData.map((project, index) => (
-                <Link
+                <a
                 key={index}
                   href={`#${project.slug.current}`}
                   onClick={() => lenis.scrollTo(`#${project.slug.current}`)}
                   className="flex items-center"
                 >
                   <p className=" hover-underline-animation">{project.titre}</p>
-                </Link>
+                </a>
               ))}
             
-              <Link
+              <a 
                 href="#contact"
                 onClick={handleClickContact}
                 className="flex items-center "
               >
                 <p className="hover-underline-animation">Contact</p>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
