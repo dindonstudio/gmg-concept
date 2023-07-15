@@ -17,3 +17,6 @@ export async function getProjects(lang) {
 export async function getFooter(lang) {
   return client.fetch(groq`*[_type == 'footer']`);
 }
+export async function getPage(lang) {
+  return client.fetch(groq`*[_type == 'pageFooter']`);
+}

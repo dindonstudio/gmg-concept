@@ -16,19 +16,19 @@ export default function Projet({ project, index }) {
   }, [shouldUseAOS]);
   return (
     <div id={project.slug.current}
-      className={`flex  md:justify-between single-project  flex-${flexDirection}`}
+      className={`flex md:pb-0 pb-12 md:justify-between single-project flex-col md:flex-${flexDirection}`}
     >
       <div {...aosPropsFade} className="text-p-font-size flex-1  md:pb-12">
-        <div className="sticky top-0 md:px-extend-3rem flex flex-col justify-between h-screen ">
-          <div className=" md:pt-8 flex items-end justify-between">
+        <div className="sticky top-0 md:px-extend-3rem px-6 flex flex-col justify-between md:h-screen h-auto pt-8 md:pt-0 pb-12 md:pb-0  ">
+          <div className=" md:pt-8 flex md:items-end justify-start md:justify-between md:flex-row flex-col md:pb-0 pb-12">
             <h2 className="">{project.titre}</h2>
-            <h4 className="relative text-p-font-size italic md:-top-5">{project.sousTitre}</h4>
+            <h4 className="relative text-p-font-size italic md:-top-5 -top-2">{project.sousTitre}</h4>
           </div>
 
-          <h3 className=" md:pb-12">{project.text}</h3>
+          <h3 className=" md:pb-12 text-justify">{project.text}</h3>
         </div>
       </div>
-      <div {...aosPropsFadeDelay}  className="flex flex-col flex-1">
+      <div {...aosPropsFadeDelay}  className="flex flex-col flex-1 md:gap-0 md:px-0 gap-8 px-6">
         {project.images.map((image, imageIndex) => (
           <div key={image._key} className="image__container">
             <Image

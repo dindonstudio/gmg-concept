@@ -17,6 +17,7 @@ export default {
         title: 'Slug',
         name: 'slug',
         type: 'slug',
+        description:'click on generate to auto-fill',
         options: {
           source: 'titre',
           maxLength: 96,
@@ -37,6 +38,7 @@ export default {
         name: "images",
         type: "array",
         title: "Item",
+        description:'Image size should be < 2Mo',
         of: [
           {
             type: "object",

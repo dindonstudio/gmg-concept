@@ -11,6 +11,11 @@ export default {
         title: 'Phrase Contact',
       },
       {
+        name: 'footerTextsecond',
+        type: 'text',
+        title: 'Deuxième phrase Contact',
+      },
+      {
         name: "texts",
         type: "array",
         title: "Informations Footer",

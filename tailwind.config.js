@@ -22,6 +22,11 @@ module.exports = {
           fontWeight: '400',
         }],
     
+        'p-bigger-font-size': ['clamp(13px, calc(14px + 0.38vw), 21px)', {
+      
+          fontWeight: '400',
+        }],
+    
       },
       colors: {
         'dark-blue': '#003955',

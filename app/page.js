@@ -1,7 +1,8 @@
 "use client";
+import "./globals.css";
+
 import Image from "next/image";
 import { Lenis as ReactLenis, useLenis } from '@studio-freight/react-lenis'
-import "./globals.css";
 import Overlay from "@/components/overlay";
 import Hero from "@/components/hero";
 import Header from "@/components/header";
@@ -14,6 +15,7 @@ import {
   getPresentation,
   getProjects,
   getFooter,
+  getPage
 } from "../sanity/sanity-util";
 
 export default async function Home() {
@@ -21,9 +23,10 @@ export default async function Home() {
   const presentationData = await getPresentation();
   const projectsData = await getProjects();
   const footerData = await getFooter();
-
+  const pageData = await getPage();
   return (
     <>
+     <ReactLenis root options={{ lerp: 0.08, wheelMultiplier: 0.5 }}>
         <Overlay />
         <div className="fixed tempFixed ">
         <Header projectsData={projectsData} />
@@ -33,9 +36,10 @@ export default async function Home() {
 
         <AllProjects projectsData={projectsData} />
 
-        <Footer footerData={footerData} />
+        <Footer footerData={footerData} pageData={pageData} />
         </div>
-    
+        </ReactLenis>
+
     </>
   );
 }

@@ -2,11 +2,15 @@
 import { defineConfig } from "sanity"
 import { deskTool } from "sanity/desk"
 import { visionTool } from "@sanity/vision"
+import { dashboardTool } from "@sanity/dashboard";
+
 import { schemaTypes } from "./schemas"
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {withDocumentI18nPlugin, getDocumentList} from '@sanity/document-internationalization'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 import {schema} from './sanity/schema'
+import { netlifyWidget } from "sanity-plugin-dashboard-widget-netlify";
+
 // Define the actions that should be available for singleton documents
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
@@ -88,10 +92,27 @@ export default defineConfig({
               ),
               S.divider(),
             // Regular document types
-            // S.documentTypeListItem("author").title("Authors"),
+            S.documentTypeListItem("pageFooter").title("Page légales"),
           ]),
     }),
-    visionTool(),
+
+    dashboardTool({
+      widgets: [
+        netlifyWidget({
+            title: 'My Netlify deploys',
+            sites: [
+           
+              {
+                title: 'GMG - Concept',
+                apiId: '2fcbb5b0-31bd-4f74-9999-f3e61187163f',
+                buildHookId: 'https://api.netlify.com/build_hooks/64b2903f1f52c105bc151e57',
+                name: 'ornate-horse-8b431c',
+        
+              }
+            ]
+        })
+      ]
+    })
   ],
 
   schema: {

@@ -1,4 +1,5 @@
 "use client";
+
 import { Inter } from "next/font/google";
 import { Lenis as ReactLenis, useLenis } from "@studio-freight/react-lenis";
 
@@ -16,10 +17,9 @@ export default function RootLayout({ children }) {
   });
 
   return (
-    <ReactLenis root options={{ lerp: 0.08, wheelMultiplier: 0.5 }}>
+   
       <html  lang="en">
         <body >{children}</body>
       </html>
-    </ReactLenis>
   );
 }
