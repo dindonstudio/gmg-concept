@@ -24,6 +24,31 @@ export default async function Home() {
   const projectsData = await getProjects();
   const footerData = await getFooter();
   const pageData = await getPage();
+
+  useEffect(() => {
+    setTimeout(() => {
+      
+      const tempFixedElement = document.querySelector(".tempFixed");
+      console.log(tempFixedElement)
+      if (tempFixedElement) {
+        tempFixedElement.style.position = "relative";
+      }
+    }, 3300);
+    setTimeout(() => {
+      const tempFixedElement = document.querySelector(".tempFixed");
+
+      if (tempFixedElement) {
+        tempFixedElement.style.position = "relative";
+      }
+    }, 3000);
+    setTimeout(() => {
+      const tempFixedElement = document.querySelector(".tempFixed");
+
+      if (tempFixedElement) {
+        tempFixedElement.style.position = "relative";
+      }
+    }, 3500);
+  }, []);
   return (
     <>
      <ReactLenis root options={{ lerp: 0.08, wheelMultiplier: 0.5 }}>
