@@ -10,6 +10,7 @@ import Presentation from "@/components/presentation";
 import Solutions from "@/components/solutions";
 import AllProjects from "@/components/allProjects";
 import Footer from "@/components/footer";
+import { useEffect } from "react";
 import {
   getHero,
   getPresentation,
