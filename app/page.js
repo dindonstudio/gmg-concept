@@ -10,7 +10,6 @@ import Presentation from "@/components/presentation";
 import Solutions from "@/components/solutions";
 import AllProjects from "@/components/allProjects";
 import Footer from "@/components/footer";
-import { useEffect } from "react";
 import {
   getHero,
   getPresentation,
@@ -26,35 +25,12 @@ export default async function Home() {
   const footerData = await getFooter();
   const pageData = await getPage();
 
-  useEffect(() => {
-    setTimeout(() => {
-      
-      const tempFixedElement = document.querySelector(".tempFixed");
-      console.log(tempFixedElement)
-      if (tempFixedElement) {
-        tempFixedElement.style.position = "relative";
-      }
-    }, 3300);
-    setTimeout(() => {
-      const tempFixedElement = document.querySelector(".tempFixed");
-
-      if (tempFixedElement) {
-        tempFixedElement.style.position = "relative";
-      }
-    }, 3000);
-    setTimeout(() => {
-      const tempFixedElement = document.querySelector(".tempFixed");
-
-      if (tempFixedElement) {
-        tempFixedElement.style.position = "relative";
-      }
-    }, 3500);
-  }, []);
+  
   return (
     <>
      <ReactLenis root options={{ lerp: 0.08, wheelMultiplier: 0.5 }}>
         <Overlay />
-        <div className="fixed tempFixed ">
+        {/* <div className="fixed tempFixed "> */}
         <Header projectsData={projectsData} />
         <Hero heroData={heroData} />
         <Presentation presentationData={presentationData} />
@@ -63,7 +39,7 @@ export default async function Home() {
         <AllProjects projectsData={projectsData} />
 
         <Footer footerData={footerData} pageData={pageData} />
-        </div>
+        {/* </div> */}
         </ReactLenis>
 
     </>

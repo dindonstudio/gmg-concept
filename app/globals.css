@@ -353,6 +353,7 @@ body[data-aos-easing="new-easing-delay2-short"] [data-aos],
   right: 1.5rem;
   top: 3.25rem;
 }
+
 .hamburger.close span:nth-child(1){
   transform: rotate(-45deg);
   /* left: 1rem; */
