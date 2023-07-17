@@ -22,7 +22,7 @@ export default function Projet({ project, index }) {
         <div className="sticky top-0 md:px-extend-3rem px-6 flex flex-col justify-between md:h-screen h-auto pt-8 md:pt-0 pb-12 md:pb-0  ">
           <div className=" md:pt-8 flex md:items-end justify-start md:justify-between md:flex-row flex-col md:pb-0 pb-12">
             <h2 className="">{project.titre}</h2>
-            <h4 className="relative text-p-font-size italic md:-top-5 -top-2">{project.sousTitre}</h4>
+            <h4 className="relative text-p-font-size italic md:top-1vw -top-2">{project.sousTitre}</h4>
           </div>
 
           <h3 className=" md:pb-12 text-justify">{project.text}</h3>

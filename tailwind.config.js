@@ -17,7 +17,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontSize: {
-        'p-font-size': ['clamp(13px, calc(11px + 0.38vw), 21px)', {
+        'p-font-size': ['clamp(13px, calc(13px + 0.38vw), 21px)', {
       
           fontWeight: '400',
         }],
