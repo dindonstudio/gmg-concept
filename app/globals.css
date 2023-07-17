@@ -338,12 +338,13 @@ body[data-aos-easing="new-easing-delay2-short"] [data-aos],
 .hamburger span {
   width: 100%;
   height: 0.25rem;
-  background: #000;
+  background: #003955;
+ 
   display: block;
 }
 .hamburger.close{
   position: fixed;
-  right: 2.5rem;
+  right: 1.5rem;
   top: 3.25rem;
 }
 .hamburger.close span:nth-child(1){
@@ -395,6 +396,9 @@ font-size: 1.6rem;
 .projects .single-project:nth-child(even) {
 
   flex-direction: column;
+}
+header:hover .header__container{
+  transform: translateY(-12rem) !important;
 }
 
 }

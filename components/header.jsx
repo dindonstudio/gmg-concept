@@ -34,13 +34,27 @@ export default function Header({ projectsData }) {
         tempFixedElement.style.position = "relative";
       }
     }, 3300);
+    setTimeout(() => {
+      const tempFixedElement = document.querySelector(".tempFixed");
+
+      if (tempFixedElement) {
+        tempFixedElement.style.position = "relative";
+      }
+    }, 3000);
+    setTimeout(() => {
+      const tempFixedElement = document.querySelector(".tempFixed");
+
+      if (tempFixedElement) {
+        tempFixedElement.style.position = "relative";
+      }
+    }, 3500);
   }, []);
 
   return (
     <>
       <header className="fixed w-full h-44 group   z-10  transition-ease opacity-0 ">
         <div
-          className="header__container md:grid  transition-ease py-12 px-extend-3rem grid-cols-12 bg-light-blue  h-full "
+          className="header__container md:grid  transition-ease py-12 md:px-extend-3rem px-6 grid-cols-12 bg-light-blue  h-full "
           style={{
             transform: isVisible ? "translateY(0)" : "translateY(-12rem)",
           }}
@@ -91,7 +105,7 @@ export default function Header({ projectsData }) {
       
         </div>
       </header>
-      <div className="menu-mobile md:hidden fixed  right-10">
+      <div className="menu-mobile md:hidden fixed  right-6">
           <button onClick={toggleMenu} className="hamburger">
             <span></span>
             <span></span>
@@ -105,7 +119,7 @@ export default function Header({ projectsData }) {
     
           </button>
             
-              <div className="flex flex-col flex-1 items-end mt-24 h-auto pb-12 pt-12 gap-2">
+              <div className="flex flex-col flex-1 items-end mt-24 h-auto pb-12 pt-6 gap-2">
                 
               {projectsData.map((project, index) => (
                 <a
